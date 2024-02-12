@@ -75,8 +75,25 @@ securityContext: {}
 probe:
   readiness:
     enabled: true
+    failureThreshold: 5
+    httpGet:
+      path: /
+      port: http
+    initialDelaySeconds: 35
+    periodSeconds: 10
+    successThreshold: 5
+    timeoutSeconds: 5
+
   liveness:
     enabled: true
+    failureThreshold: 5
+    httpGet:
+      path: /
+      port: http
+    initialDelaySeconds: 30
+    periodSeconds: 10
+    successThreshold: 5
+    timeoutSeconds: 5
 
 service:
   type: ClusterIP
