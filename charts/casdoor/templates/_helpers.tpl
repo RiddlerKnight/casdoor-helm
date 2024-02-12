@@ -130,3 +130,11 @@ Create Envfrom
 {{- end -}}
 {{- end -}}
 {{- end -}}
+
+{{/*
+Create Probe Template
+*/}}
+{{- define "casdoor.probeTemplate" -}}
+{{- $attr := unset . "enabled" -}}
+{{- toYaml $attr -}}
+{{- end -}}

@@ -54,15 +54,11 @@ spec:
               protocol: TCP
           {{ if .Values.probe.liveness.enabled }}
           livenessProbe:
-            httpGet:
-              path: /
-              port: http
+            {{ include "casdoor.probeTemplate" .Values.probe.liveness | indent 12 | trim -}}
           {{ end }}
           {{ if .Values.probe.readiness.enabled }}
           readinessProbe:
-            httpGet:
-              path: /
-              port: http
+            {{ include "casdoor.probeTemplate" .Values.probe.readiness | indent 12 | trim -}}
           {{ end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
