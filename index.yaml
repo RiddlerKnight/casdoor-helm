@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   casdoor-helm-charts:
   - apiVersion: v2
+    appVersion: v1.531.2
+    created: "2024-02-12T13:55:07.928046156Z"
+    description: A Helm chart for Kubernetes
+    digest: df64981cf0b10db6b5a727823ec8cfdabdc5e246f9d2f1f32746446f66fa95e2
+    name: casdoor-helm-charts
+    type: application
+    urls:
+    - https://github.com/RiddlerKnight/casdoor-helm/releases/download/casdoor-helm-charts-v1.531.2/casdoor-helm-charts-v1.531.2.tgz
+    version: v1.531.2
+  - apiVersion: v2
     appVersion: v1.531.1
     created: "2024-02-12T13:38:26.238018604Z"
     description: A Helm chart for Kubernetes
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/RiddlerKnight/casdoor-helm/releases/download/casdoor-helm-charts-v1.529.1/casdoor-helm-charts-v1.529.1.tgz
     version: v1.529.1
-generated: "2024-02-12T13:38:26.238027601Z"
+generated: "2024-02-12T13:55:07.928063128Z"
