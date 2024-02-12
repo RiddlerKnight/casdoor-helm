@@ -81,7 +81,6 @@ probe:
       port: http
     initialDelaySeconds: 35
     periodSeconds: 10
-    successThreshold: 5
     timeoutSeconds: 5
 
   liveness:
@@ -92,7 +91,6 @@ probe:
       port: http
     initialDelaySeconds: 30
     periodSeconds: 10
-    successThreshold: 5
     timeoutSeconds: 5
 
 service:
