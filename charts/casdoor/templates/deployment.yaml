@@ -60,6 +60,10 @@ spec:
           readinessProbe:
             {{ include "casdoor.probeTemplate" .Values.probe.readiness | indent 12 | trim -}}
           {{ end }}
+          {{ if .Values.probe.startupProbe.enabled }}
+          startupProbe:
+            {{ include "casdoor.probeTemplate" .Values.probe.startupProbe | indent 12 | trim -}}
+          {{ end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
